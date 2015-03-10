@@ -1,3 +1,4 @@
 ---
 - include: bacula.yml
+- include: ntp.yml
 - include: cassandra.yml
