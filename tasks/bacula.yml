@@ -1,0 +1,2 @@
+- name: install bacula-fd
+  apt: name=bacula-fd state=latest

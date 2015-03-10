@@ -1,0 +1,10 @@
+- name: copy cassandra.list to /etc/apt/sources.list.d
+  copy: src=../files/cassandra.list dest=/etc/apt/sources.list.d/ owner=root group=root mode=0644
+
+- name: add cassandra repository key
+  apt_key: id='F758CE318D77295D' keyserver='pgp.mit.edu' state=present 
+  apt_key: id='2B5C1B00' keyserver='pgp.mit.edu' state=present 
+  apt_key: id='0353B12C' keyserver='pgp.mit.edu' state=present 
+
+- name: install the cassandra package
+  apt: name=cassandra state=latest update_cache=yes
