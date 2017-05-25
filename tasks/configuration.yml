@@ -1,0 +1,10 @@
+---
+
+- name: copy cassandra.yaml template
+  template: 
+    src: cassandra.yaml.j2 
+    dest: /etc/cassandra/cassandra.yaml
+    owner: root
+    group: root
+    mode: 0644
+  notify: restart cassandra

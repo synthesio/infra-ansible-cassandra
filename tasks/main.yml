@@ -1,3 +1,7 @@
 ---
-- include: bacula.yml
-- include: cassandra.yml
+
+- include: install.yml
+  tags: setup
+
+- include: configuration.yml
+  tags: configuration
