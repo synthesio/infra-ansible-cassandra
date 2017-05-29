@@ -1,7 +1,7 @@
 ---
 
 - include: install.yml
-  tags: setup
+  tags: install
 
 - include: configuration.yml
   tags: configuration
